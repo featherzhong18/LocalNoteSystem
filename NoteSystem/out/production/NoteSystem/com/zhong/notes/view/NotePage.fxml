@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="notePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zhong.notes.controller.NotePageController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="个人信息">
+            <items>
+              <MenuItem fx:id="enterInformationItem" mnemonicParsing="false" onAction="#enterInformationAction" text="进入个人主页" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="我的笔记">
+            <items>
+              <MenuItem fx:id="enterNoteItem" mnemonicParsing="false" onAction="#enterNoteAction" text="编辑笔记" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="搜索笔记">
+               <items>
+                  <MenuItem fx:id="enterSearchItem" mnemonicParsing="false" onAction="#enterSearchAction" text="进入搜索" />
+               </items>
+            </Menu>
+            <Menu fx:id="manageOption" mnemonicParsing="false" text="管理员权限">
+               <items>
+                  <MenuItem fx:id="enterManageItem" mnemonicParsing="false" onAction="#enterManageAction" text="进入管理" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <AnchorPane prefHeight="929.0" prefWidth="363.0" BorderPane.alignment="CENTER">
+         <children>
+            <TreeView fx:id="showTitle" layoutY="53.0" onContextMenuRequested="#selectItem" onMouseClicked="#selectItem" prefHeight="662.0" prefWidth="363.0" />
+            <Label layoutX="8.0" layoutY="4.0" text="笔记标题：">
+               <font>
+                  <Font size="29.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="868.0" prefWidth="929.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="noteText" editable="false" layoutY="87.0" prefHeight="551.0" prefWidth="922.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TextArea>
+            <TextField fx:id="titleText" editable="false" layoutX="62.0" layoutY="11.0" />
+            <Label layoutY="12.0" text="标题：">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label layoutY="51.0" text="正文：">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Button fx:id="editButton" layoutX="163.0" layoutY="671.0" mnemonicParsing="false" onAction="#editButtonAction" text="修改笔记" />
+            <Button fx:id="deleteButton" layoutX="282.0" layoutY="671.0" mnemonicParsing="false" onAction="#deleteButtonAction" text="删除笔记" />
+            <Button fx:id="saveButton" layoutX="403.0" layoutY="671.0" mnemonicParsing="false" onAction="#saveButtonAction" text="保存笔记" />
+            <Button fx:id="releaseButton" layoutX="45.0" layoutY="671.0" mnemonicParsing="false" onAction="#releaseButtonAction" text="发布笔记" />
+            <Label fx:id="emptyTextTip" layoutX="189.0" layoutY="646.0" text="请选择笔记再进行操作！" textFill="#ee0f0f" visible="false" />
+            <Label fx:id="deleteSuccessTip" layoutX="234.0" layoutY="646.0" text="删除成功！" textFill="#33f84a" visible="false" />
+            <CheckBox fx:id="limitCheck" layoutX="518.0" layoutY="673.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="168.0" text="对他人不可见？" />
+            <Label fx:id="saveSuccessTip" layoutX="234.0" layoutY="646.0" text="保存成功！" textFill="#33f84a" visible="false" />
+            <Label fx:id="dateLabel" layoutX="718.0" layoutY="646.0" text="修改日期：" />
+            <Button fx:id="refreshButton" layoutX="768.0" layoutY="671.0" mnemonicParsing="false" onAction="#refreshButton" text="刷新" />
+            <Label fx:id="noteDateLabel" layoutX="793.0" layoutY="646.0" text="yyyy-MM-dd" />
+            <Label fx:id="existTip" layoutX="144.0" layoutY="646.0" text="您输入的标题已存在，请再次输入！" textFill="#ee0f0f" visible="false" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

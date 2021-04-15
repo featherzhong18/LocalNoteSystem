@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zhong.notes.controller.LoginController">
+   <children>
+      <AnchorPane layoutX="77.0" layoutY="14.0" prefHeight="106.0" prefWidth="446.0">
+         <children>
+            <Text layoutX="74.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="笔记系统登录" wrappingWidth="334.0">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="130.0" layoutY="103.0" prefHeight="177.0" prefWidth="340.0">
+         <children>
+            <Label layoutX="42.0" layoutY="45.0" text="用户名：" />
+            <Label layoutX="57.0" layoutY="89.0" text="密码：" />
+            <TextField fx:id="userNameTextField" layoutX="111.0" layoutY="40.0" prefHeight="30.0" prefWidth="200.0" />
+            <PasswordField fx:id="enterPasswordField" layoutX="111.0" layoutY="84.0" prefHeight="30.0" prefWidth="200.0" />
+            <Label fx:id="loginTip" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="137.0" text="登录错误信息" textFill="#df1d1d" visible="false" />
+            <Label fx:id="loginSuccess" alignment="CENTER" layoutX="140.0" layoutY="137.0" text="登录成功!" textFill="#2afc49" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="155.0" layoutY="273.0" prefHeight="114.0" prefWidth="291.0">
+         <children>
+            <Button fx:id="loginButton" layoutX="34.0" layoutY="14.0" mnemonicParsing="false" onAction="#loginButtonAction" text="登录" />
+            <Button fx:id="registerButton" layoutX="121.0" layoutY="14.0" mnemonicParsing="false" onAction="#registerButtonAction" text="注册" />
+            <ChoiceBox fx:id="choiceBox" layoutX="209.0" layoutY="14.0" prefHeight="30.0" prefWidth="71.0" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

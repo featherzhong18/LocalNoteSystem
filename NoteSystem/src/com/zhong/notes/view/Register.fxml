@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zhong.notes.controller.RegisterController">
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="registerButton" layoutX="186.0" layoutY="114.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="30.0" prefWidth="80.0" text="注册" />
+            <Button fx:id="backButton" layoutX="339.0" layoutY="114.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="80.0" text="返回登录" />
+            <Label layoutX="155.0" layoutY="-7.0" text="请输入密码：" />
+            <Label fx:id="registerTip" contentDisplay="CENTER" layoutX="274.0" layoutY="73.0" textAlignment="CENTER" textFill="#d31515" />
+            <Label layoutX="155.0" layoutY="41.0" text="请确认密码：" />
+            <PasswordField fx:id="passwordTextField" layoutX="245.0" layoutY="-12.0" />
+            <PasswordField fx:id="confirmPasswordTextField" layoutX="245.0" layoutY="36.0" />
+            <Label fx:id="registerSuccessTip" contentDisplay="CENTER" layoutX="251.0" layoutY="83.0" textFill="#26dd3e" />
+            <Label fx:id="passwordTip" contentDisplay="CENTER" layoutX="281.0" layoutY="93.0" textAlignment="CENTER" textFill="#d31515" />
+            <Label fx:id="outOfLengthTip" layoutX="179.0" layoutY="83.0" text="输入的用户名超过30字，请重新输入！" textFill="#d31515" visible="false" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="200.0" layoutY="49.0" text="用户注册">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="140.0" layoutY="146.0" text="请输入用户名：" />
+            <TextArea fx:id="userNameTextArea" layoutX="245.0" layoutY="140.0" prefHeight="30.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="searchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zhong.notes.controller.SearchPageController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="个人信息">
+                    <items>
+                        <MenuItem fx:id="enterInformationItem" mnemonicParsing="false" onAction="#enterInformationAction" text="进入个人主页" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="我的笔记">
+                    <items>
+                        <MenuItem fx:id="enterNoteItem" mnemonicParsing="false" onAction="#enterNoteAction" text="编辑笔记" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="搜索笔记">
+                    <items>
+                        <MenuItem fx:id="enterSearchItem" mnemonicParsing="false" onAction="#enterSearchAction" text="进入搜索" />
+                    </items>
+                </Menu>
+                <Menu fx:id="manageOption" mnemonicParsing="false" text="管理员权限">
+                    <items>
+                        <MenuItem fx:id="enterManageItem" mnemonicParsing="false" onAction="#enterManageAction" text="进入管理" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="199.0" layoutY="29.0" text="请输入要查找的信息：">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchText" layoutX="464.0" layoutY="28.0" prefHeight="36.0" prefWidth="372.0" />
+            <ChoiceBox fx:id="chooseSearch" layoutX="939.0" layoutY="31.0" prefHeight="30.0" prefWidth="142.0" />
+            <TreeView fx:id="nameTreeView" layoutX="15.0" layoutY="70.0" onContextMenuRequested="#chooseName" onMouseClicked="#chooseName" prefHeight="634.0" prefWidth="345.0" />
+            <TextArea fx:id="noteText" layoutX="437.0" layoutY="115.0" prefHeight="590.0" prefWidth="782.0" wrapText="true" />
+            <TextField fx:id="titleText" layoutX="437.0" layoutY="75.0" prefHeight="30.0" prefWidth="433.0" />
+            <Label layoutX="392.0" layoutY="80.0" text="标题：" />
+            <Label layoutX="392.0" layoutY="115.0" text="正文：" />
+            <Button fx:id="searchButton" layoutX="859.0" layoutY="31.0" mnemonicParsing="false" onAction="#searchButton" text="搜索" />
+            <Label layoutX="887.0" layoutY="80.0" text="作者：" />
+            <TextField fx:id="authorText" layoutX="932.0" layoutY="74.0" prefHeight="31.0" prefWidth="202.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

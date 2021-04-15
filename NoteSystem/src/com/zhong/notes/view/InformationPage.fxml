@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="informationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zhong.notes.controller.InformationPageController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="个人信息">
+            <items>
+              <MenuItem fx:id="enterInformationItem" mnemonicParsing="false" onAction="#enterInformationAction" text="进入个人主页" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="我的笔记">
+            <items>
+              <MenuItem fx:id="enterNoteItem" mnemonicParsing="false" onAction="#enterNoteAction" text="编辑笔记" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="搜索笔记">
+               <items>
+                  <MenuItem fx:id="enterSearchItem" mnemonicParsing="false" onAction="#enterSearchAction" text="进入搜索" />
+               </items>
+            </Menu>
+            <Menu fx:id="manageOption" mnemonicParsing="false" text="管理员权限">
+               <items>
+                  <MenuItem fx:id="enterManageItem" mnemonicParsing="false" onAction="#enterManageAction" text="进入管理" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="99.0" layoutY="227.0" text="用户昵称：">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="99.0" layoutY="267.0" text="用户类型：">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="99.0" layoutY="307.0" text="注册时间：">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="userNameLabel" contentDisplay="CENTER" layoutX="205.0" layoutY="227.0" text="显示用户名" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="userTypeLabel" layoutX="205.0" layoutY="267.0" text="显示用户类型" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="userDateLabel" alignment="CENTER" layoutX="205.0" layoutY="307.0" text="显示用户注册日期" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <MenuBar layoutX="416.0" layoutY="225.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="修改用户信息">
+                  <items>
+                    <MenuItem fx:id="changeName" mnemonicParsing="false" onAction="#changeNameAction" text="修改昵称" />
+                        <MenuItem fx:id="changePassword" mnemonicParsing="false" onAction="#changePasswordAction" text="修改密码" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ImageView fx:id="headPhoto" fitHeight="150.0" fitWidth="200.0" layoutX="190.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/headphoto.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
